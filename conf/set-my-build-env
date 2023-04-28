@@ -1,0 +1,16 @@
+# Find build templates from meta-mylayer.
+export TEMPLATECONF="meta-mylayer/conf"
+
+# Find where the global conf directory is...
+scriptdir="$(dirname "${BASH_SOURCE}")"
+
+# Find where the workspace is...
+CURDIR=$(readlink -f $scriptdir/../..)
+
+function build-qemuarm-64-sato-image() {
+        export MACHINE="qemuarm64"
+        export DISTRO="mypoky"
+        bitbake core-image-sato
+}
+
+. ${CURDIR}/oe-init-build-env

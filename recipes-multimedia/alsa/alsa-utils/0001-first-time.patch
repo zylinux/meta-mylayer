@@ -1,0 +1,21 @@
+From 6b904ad7912044268bf3c617025f087bd84618ee Mon Sep 17 00:00:00 2001
+From: min zhang <zhangmin1984121@gmail.com>
+Date: Thu, 20 Apr 2023 11:47:40 -0400
+Subject: [PATCH] first time
+
+---
+ alsamixer/cli.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/alsamixer/cli.c b/alsamixer/cli.c
+index 63c4949..5b0dc39 100644
+--- a/alsamixer/cli.c
++++ b/alsamixer/cli.c
+@@ -41,6 +41,7 @@ static struct snd_mixer_selem_regopt selem_regopt = {
+ static void show_help(void)
+ {
+ 	puts(_("Usage: alsamixer [options]"));
++	puts(_("Usage: alsamixer [options] mjj first time"));
+ 	puts(_("Useful options:\n"
+ 	       "  -h, --help              this help\n"
+ 	       "  -c, --card=NUMBER       sound card number or id\n"

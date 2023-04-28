@@ -1,0 +1,21 @@
+From 8bf461adc00f759409f6495d6dea59f1af37d939 Mon Sep 17 00:00:00 2001
+From: min zhang <zhangmin1984121@gmail.com>
+Date: Sun, 23 Apr 2023 23:45:22 -0400
+Subject: [PATCH] mjj updated kernel hello
+
+---
+ init/calibrate.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/init/calibrate.c b/init/calibrate.c
+index f3831272f113..1f2baf4f4725 100644
+--- a/init/calibrate.c
++++ b/init/calibrate.c
+@@ -277,6 +277,7 @@ void calibrate_delay(void)
+ 	unsigned long lpj;
+ 	static bool printed;
+ 	int this_cpu = smp_processor_id();
++	printk(KERN_INFO"***HELLO YOCTO KERNEL MJJ***\n");
+ 
+ 	if (per_cpu(cpu_loops_per_jiffy, this_cpu)) {
+ 		lpj = per_cpu(cpu_loops_per_jiffy, this_cpu);
